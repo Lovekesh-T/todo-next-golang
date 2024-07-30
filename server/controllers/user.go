@@ -108,11 +108,11 @@ func SignIn(db *sql.DB) http.HandlerFunc{
 		cookie := http.Cookie{
 			Name: "token",
 			Value: token,
-			Expires:  time.Now().Add(24 * time.Hour), // Cookie expires in 24 hours
+			Expires:  time.Now().Add(48 * time.Hour), // Cookie expires in 24 hours
 			HttpOnly: true,
 			Path: "/",
 			SameSite: 4,
-			Secure: false,
+			Secure: true,
 
 		}
 
