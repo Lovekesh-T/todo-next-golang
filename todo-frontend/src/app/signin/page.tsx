@@ -34,7 +34,6 @@ export default function Login() {
         }
       );
         
-      console.log(res.data.data)
       localStorage.setItem("token",res.data.data);
       toast.success(res.data.message);
       router.push("/");
