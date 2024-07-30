@@ -17,7 +17,6 @@ func ConnectDb() *sql.DB{
 	}
 	db_url:=os.Getenv("POSTGRES_URL");
     
-	println("hello world")
 	fmt.Println(db_url);
 	db,err := sql.Open("postgres",db_url);
 
