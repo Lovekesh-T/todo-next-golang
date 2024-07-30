@@ -13,7 +13,7 @@ import (
 func ConnectDb() *sql.DB{
     err := godotenv.Load()
 	if err != nil{
-		log.Fatal("error loading the .env file");
+		fmt.Println("error loading .env file");
 	}
 	db_url:=os.Getenv("POSTGRES_URL");
     
