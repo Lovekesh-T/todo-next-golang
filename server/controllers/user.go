@@ -113,7 +113,7 @@ func SignIn(db *sql.DB) http.HandlerFunc{
 			Path: "/",
 			SameSite: 4,
 			Secure: true,
-			Domain: ".onrender.com",
+			Domain: "todo-client-lfng.onrender.com",
 
 		}
 
