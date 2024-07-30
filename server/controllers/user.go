@@ -112,6 +112,7 @@ func SignIn(db *sql.DB) http.HandlerFunc{
 			HttpOnly: true,
 			Path: "/",
 			SameSite: 4,
+			Secure: true,
 
 		}
 
