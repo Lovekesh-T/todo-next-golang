@@ -9,7 +9,7 @@ const Logout = ()=> {
     const logoutHandler = async ()=>{
 
         try {
-            const res = await axios.get("http://localhost:3000/api/logout");
+            const res = await axios.get("/api/logout");
             toast.success(res.data.message);
             router.push("/signin");
         } catch (error) {

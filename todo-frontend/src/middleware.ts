@@ -10,7 +10,6 @@ export function middleware(request: NextRequest) {
     }
     if(request.nextUrl.pathname === "/"){
       const token = request.cookies.get("token");
-      request.cookies.set("auth","badbody");
 
       if(!token) return NextResponse.redirect(new URL("/signin",request.url));
     }

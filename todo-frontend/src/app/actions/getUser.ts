@@ -3,7 +3,7 @@ import axios from "axios";
 export async function getUser(token:string){
    
     try {
-      const res = await axios.get("http://localhost:4000/api/v1/users/me",{
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/v1/users/me`,{
         headers:{
             Authorization:token
         }

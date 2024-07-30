@@ -14,7 +14,7 @@ const NewTodo = ({ fetchTodos }: { fetchTodos: () => void }) => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/todos/create",
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/v1/todos/create`,
         {
           title,
           description,

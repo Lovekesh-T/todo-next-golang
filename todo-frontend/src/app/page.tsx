@@ -21,7 +21,7 @@ export default async function Home() {
     console.log(res);
     user = res;
     const { data } = await axios.get(
-      `http://localhost:4000/api/v1/todos/all?user_id=${user.data.id}`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/v1/todos/all?user_id=${user.data.id}`,
       {
         headers: {
           Authorization: value,

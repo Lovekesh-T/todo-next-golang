@@ -24,7 +24,7 @@ const Todo = ({ data, user }: { data: Todo[]; user: User }) => {
 
   const deleteTodo = async (id: number) => {
     const { data } = await axios.delete(
-      `http://localhost:4000/api/v1/todos/${id}`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/v1/todos/${id}`,
       {
         headers: {
           Authorization: localStorage.getItem("token"),

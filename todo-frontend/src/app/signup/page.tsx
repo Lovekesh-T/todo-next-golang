@@ -34,7 +34,7 @@ export default function SignUp() {
 
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/v1/users/signup",
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/v1/users/signup`,
         {
           name: formdata.name,
           email: formdata.email,

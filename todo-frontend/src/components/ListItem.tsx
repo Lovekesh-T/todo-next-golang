@@ -32,7 +32,7 @@ const ListItem = ({
     console.log(todo.todoid);
     try {
       const res = await axios.patch(
-        `http://localhost:4000/api/v1/todos/${todo.todoid}`,
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/v1/todos/${todo.todoid}`,
         {
           title,
           description,

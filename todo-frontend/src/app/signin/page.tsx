@@ -25,7 +25,7 @@ export default function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/v1/users/signin",
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/v1/users/signin`,
         {
           email: formdata.email,
           password: formdata.password,
