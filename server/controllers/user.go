@@ -110,8 +110,6 @@ func SignIn(db *sql.DB) http.HandlerFunc{
 			Value: token,
 			Expires:  time.Now().Add(48 * time.Hour), // Cookie expires in 24 hours
 			HttpOnly: true,
-			Path: "/",
-
 		}
 
 		http.SetCookie(res,&cookie);
